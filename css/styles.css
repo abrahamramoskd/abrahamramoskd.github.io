@@ -1309,3 +1309,255 @@ section { position: relative; z-index: 2; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
   .benefits-mini-cards { grid-template-columns: 1fr 1fr; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   GLASSMORPHISM + NEUMORPHISM ENHANCEMENTS
+   Inspirado en la imagen adjunta: superficies translúcidas,
+   esferas flotantes, bordes luminosos suaves
+══════════════════════════════════════════════════════ */
+
+/* ─── Orbs flotantes decorativos (neumorphism) ──── */
+.glass-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero orbs upgrade — más vívidas */
+.hero-orb-1 {
+  background: radial-gradient(circle at 40% 40%,
+    rgba(200, 220, 255, 0.18) 0%,
+    rgba(0, 102, 255, 0.15) 40%,
+    transparent 70%);
+  box-shadow:
+    inset 0 0 60px rgba(255,255,255,0.08),
+    0 0 80px rgba(0, 102, 255, 0.15);
+}
+
+.hero-orb-2 {
+  background: radial-gradient(circle at 60% 30%,
+    rgba(200, 240, 255, 0.14) 0%,
+    rgba(0, 200, 255, 0.1) 40%,
+    transparent 70%);
+  box-shadow:
+    inset 0 0 40px rgba(255,255,255,0.06),
+    0 0 60px rgba(0, 200, 255, 0.1);
+}
+
+/* ─── Glass cards mejoradas ──────────────────────── */
+.service-card,
+.benefit-item,
+.mini-card,
+.benefits-card-main,
+.cta-box,
+.about-float-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055) 0%,
+    rgba(13, 21, 32, 0.6) 100%
+  );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Shine highlight en la esquina superior izquierda */
+.service-card::before,
+.benefit-item::before,
+.benefits-card-main::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 60%; height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.18), transparent);
+  pointer-events: none;
+}
+
+/* ─── Neumorphism en botones sociales ────────────── */
+.social-btn {
+  width: 40px; height: 40px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(0,0,0,0.3));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  box-shadow:
+    3px 3px 8px rgba(0,0,0,0.5),
+    -1px -1px 4px rgba(255,255,255,0.04);
+  transition: var(--transition);
+}
+
+.social-btn:hover {
+  background: linear-gradient(145deg, rgba(0,200,255,0.12), rgba(0,80,180,0.25));
+  border-color: rgba(0, 200, 255, 0.35);
+  color: var(--accent-cyan);
+  box-shadow:
+    0 0 16px rgba(0, 200, 255, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* Tooltips en social buttons */
+.social-btn {
+  position: relative;
+}
+
+.social-btn[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: rgba(3, 5, 8, 0.95);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: var(--text-secondary);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.social-btn[aria-label]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ─── Mapa estilizado ────────────────────────────── */
+.about-map {
+  margin-top: 2rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(0, 200, 255, 0.05);
+  position: relative;
+}
+
+.about-map::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ─── Navbar glassmorphism upgrade ───────────────── */
+#navbar.scrolled {
+  background: linear-gradient(
+    135deg,
+    rgba(3, 5, 8, 0.75) 0%,
+    rgba(7, 12, 20, 0.85) 100%
+  );
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 1px 0 rgba(0, 200, 255, 0.08),
+    0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Portfolio cards glass ──────────────────────── */
+.portfolio-item {
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.4s cubic-bezier(0.23,1,0.32,1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.portfolio-item:hover {
+  border-color: rgba(0, 200, 255, 0.22);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 200, 255, 0.08);
+}
+
+/* ─── Showreel featured glass ────────────────────── */
+.showreel-featured {
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 0 1px rgba(0, 200, 255, 0.06);
+}
+
+/* ─── About location link ────────────────────────── */
+.about-location a {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 200, 255, 0.3);
+  transition: color 0.2s;
+}
+.about-location a:hover { color: #fff; }
+
+/* ─── Hero badge glass upgrade ───────────────────── */
+.hero-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.07) 0%,
+    rgba(0, 102, 255, 0.08) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  box-shadow:
+    0 2px 12px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* ─── Liquid glass en cards de demo ──────────────── */
+.demo-card {
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* ─── Section separators glow ────────────────────── */
+#servicios::before,
+#portafolio::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,200,255,0.15), transparent);
+  margin-bottom: 0;
+}
+
+/* ─── CTA glass sphere background ───────────────── */
+.cta-box::after {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 100, 255, 0.07), transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 200, 255, 0.05), transparent 60%);
+}
+
+/* ─── Footer glass upgrade ───────────────────────── */
+#footer {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 5, 8, 0.7) 0%,
+    rgba(2, 4, 8, 0.95) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 -1px 0 rgba(0, 200, 255, 0.06);
+}
+
+/* ─── About map responsive ───────────────────────── */
+@media (max-width: 768px) {
+  .about-map iframe { height: 180px; }
+}

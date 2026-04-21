@@ -12,7 +12,7 @@
   const ctx = canvas.getContext('2d');
 
   let W, H, particles = [], mouse = { x: -9999, y: -9999 };
-  const COLORS = ['#0066ff', '#00c8ff', '#003399', '#004488'];
+  const COLORS = ['#00e5a0', '#00c896', '#00ffb3', '#009966'];
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -274,3 +274,29 @@ document.querySelectorAll('.btn-primary, .btn-whatsapp').forEach(btn => {
     setTimeout(() => ripple.remove(), 700);
   });
 });
+
+// ─── Repos Filter ─────────────────────────────────
+(function initReposFilter() {
+  const filters = document.querySelectorAll('.repo-filter');
+  const cards   = document.querySelectorAll('.repo-card');
+  if (!filters.length) return;
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('hidden', !match);
+        if (match) {
+          // Re-trigger reveal animation
+          card.classList.remove('visible');
+          requestAnimationFrame(() => {
+            setTimeout(() => card.classList.add('visible'), 50);
+          });
+        }
+      });
+    });
+  });
+})();

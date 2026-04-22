@@ -19,11 +19,11 @@
 | Red | Enlace |
 | --- | --- |
 | 🐙 GitHub | [github.com/abrahamramoskd](https://github.com/abrahamramoskd) |
-| 👤 Facebook personal | [facebook.com/humbrahexx](https://www.facebook.com/humbrahexx/) |
+| 👤 Facebook | [facebook.com/humbrahexx](https://www.facebook.com/humbrahexx/) |
 | 🏢 Facebook estudio | [facebook.com/ivalitystudios](https://www.facebook.com/ivalitystudios) |
 | 💼 LinkedIn | [linkedin.com/in/abraham-ramos-6b3740403](https://www.linkedin.com/in/abraham-ramos-6b3740403/) |
 | 💬 WhatsApp | [+52 1 828 105 0910](https://wa.me/528281050910) |
-| ✉️ Email | [estudiosivality@gmail.com](mailto:estudiosivality@gmail.com) |
+| ✉️ Email | [jaalanisramos@gmail.com](mailto:jaalanisramos@gmail.com) |
 | 📍 Ubicación | [Cadereyta Jiménez, NL, México](https://maps.google.com/?q=Cadereyta+Jimenez+Nuevo+Leon+Mexico) |
 
 ---
@@ -126,7 +126,7 @@ El footer incluye los siguientes íconos con tooltips:
 3. 🏢 **Facebook Ivality Studios** — página del estudio
 4. 🐙 **GitHub** — repositorio `abrahamramoskd`
 5. 💼 **LinkedIn** — perfil profesional
-6. ✉️ **Email** — `estudiosivality@gmail.com`
+6. ✉️ **Email** — `jaalanisramos@gmail.com`
 
 ---
 

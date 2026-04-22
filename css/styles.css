@@ -251,6 +251,8 @@ section { position: relative; z-index: 2; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  min-height: 1.15em;  /* reserva el espacio de una línea siempre */
+  white-space: nowrap; /* evita saltos de línea intermedios al tipear */
 }
 
 .hero-subtitle {

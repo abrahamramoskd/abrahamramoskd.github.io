@@ -385,7 +385,7 @@
         <h2 class="section-title" id="showreel-title">Demos &amp; <em>Showreel</em></h2>
         <p class="section-subtitle" style="text-align:left; max-width:none;">Experiencias interactivas y proyectos animados que hemos creado.</p>
       </header>
-      <span class="showreel-count">5 demos disponibles</span>
+      <span class="showreel-count">10 demos disponibles</span>
     </div>
 
     <!-- Featured Video -->
@@ -402,7 +402,7 @@
     </div>
 
     <!-- Demo Grid -->
-    <div class="showreel-grid">
+    <div class="showreel-grid" id="showreel-grid">
 
       <div class="demo-card active reveal reveal-delay-1"
            data-src="assets/videos/recorridovirtual.mp4"
@@ -465,6 +465,72 @@
         <div class="demo-card-overlay">
           <span class="demo-card-tag">Visualización 3D</span>
           <p class="demo-card-name">Neurona Interactiva</p>
+        </div>
+        <div class="demo-play-icon">▶</div>
+      </div>
+
+      <!-- ── 5 VIDEOS NUEVOS ── -->
+      <div class="demo-card reveal reveal-delay-1"
+           data-src="assets/videos/animacion_en_galeria.mp4"
+           data-title="Animación en Galería"
+           data-desc="Transiciones cinematográficas entre imágenes con efectos de entrada y salida de alta fluidez."
+           data-tag="Animación Web">
+        <video muted playsinline loop preload="metadata" src="assets/videos/animacion_en_galeria.mp4"></video>
+        <div class="demo-card-overlay">
+          <span class="demo-card-tag">Animación Web</span>
+          <p class="demo-card-name">Animación en Galería</p>
+        </div>
+        <div class="demo-play-icon">▶</div>
+      </div>
+
+      <div class="demo-card reveal reveal-delay-2"
+           data-src="assets/videos/slider_.mp4"
+           data-title="Slider Interactivo"
+           data-desc="Componente de slider con navegación fluida, transiciones animadas y diseño responsivo."
+           data-tag="UI/UX">
+        <video muted playsinline loop preload="metadata" src="assets/videos/slider_.mp4"></video>
+        <div class="demo-card-overlay">
+          <span class="demo-card-tag">UI/UX</span>
+          <p class="demo-card-name">Slider Interactivo</p>
+        </div>
+        <div class="demo-play-icon">▶</div>
+      </div>
+
+      <div class="demo-card reveal reveal-delay-3"
+           data-src="assets/videos/carrusel_3D_animado.mp4"
+           data-title="Carrusel 3D v2"
+           data-desc="Segunda versión del carrusel tridimensional con profundidad de campo y perspectiva mejorada."
+           data-tag="Frontend 3D">
+        <video muted playsinline loop preload="metadata" src="assets/videos/carrusel_3D_animado.mp4"></video>
+        <div class="demo-card-overlay">
+          <span class="demo-card-tag">Frontend 3D</span>
+          <p class="demo-card-name">Carrusel 3D v2</p>
+        </div>
+        <div class="demo-play-icon">▶</div>
+      </div>
+
+      <div class="demo-card reveal reveal-delay-4"
+           data-src="assets/videos/plasma_animado_y_editable.mp4"
+           data-title="Plasma Animado Editable"
+           data-desc="Efecto de plasma generativo con controles en tiempo real para modificar colores, velocidad y forma."
+           data-tag="Canvas / Generativo">
+        <video muted playsinline loop preload="metadata" src="assets/videos/plasma_animado_y_editable.mp4"></video>
+        <div class="demo-card-overlay">
+          <span class="demo-card-tag">Canvas / Generativo</span>
+          <p class="demo-card-name">Plasma Animado</p>
+        </div>
+        <div class="demo-play-icon">▶</div>
+      </div>
+
+      <div class="demo-card reveal reveal-delay-5"
+           data-src="assets/videos/supermario_en_css.mp4"
+           data-title="Super Mario en CSS"
+           data-desc="Recreación de Super Mario Bros completamente en CSS puro — sprites, animaciones y escena sin una línea de JavaScript."
+           data-tag="CSS Art">
+        <video muted playsinline loop preload="metadata" src="assets/videos/supermario_en_css.mp4"></video>
+        <div class="demo-card-overlay">
+          <span class="demo-card-tag">CSS Art</span>
+          <p class="demo-card-name">Super Mario en CSS</p>
         </div>
         <div class="demo-play-icon">▶</div>
       </div>
@@ -557,13 +623,16 @@
 
     <div class="repos-grid">
 
-      <!-- Particle Trails -->
+      <!-- CursorPro — Arte Generativo -->
       <article class="repo-card reveal reveal-delay-1" data-cat="web">
-        <div class="repo-card-preview repo-preview-particles">
-          <div class="repo-particles-anim">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe repo-preview-srcdoc">
+          <iframe
+            srcdoc="<!DOCTYPE html><html><head><meta charset='UTF-8'><style>body,html{margin:0;padding:0;overflow:hidden;background:#000}canvas{width:100%;height:100vh}#controls{position:absolute;top:6px;left:6px;background:rgba(255,255,255,0.15);padding:6px 8px;border-radius:6px;backdrop-filter:blur(8px)}button{margin:2px;padding:3px 7px;background:#4CAF50;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:10px}</style></head><body><canvas id='art-canvas'></canvas><div id='controls'><button id='color-btn'>Paleta</button><button id='reset-btn'>Reset</button></div><script>const canvas=document.getElementById('art-canvas'),ctx=canvas.getContext('2d');canvas.width=window.innerWidth;canvas.height=window.innerHeight;const palettes=[['#FF6B6B','#4ECDC4','#45B7D1','#FDCB6E','#6C5CE7'],['#FF00FF','#00FFFF','#FFFF00','#FF0000','#0000FF'],['#f72585','#7209b7','#3a0ca3','#4361ee','#4cc9f0'],['#ffbe0b','#fb5607','#ff006e','#8338ec','#3a86ff'],['#ffcdb2','#ffb4a2','#e5989b','#b5838d','#6d6875'],['#ff9f1c','#ffbf69','#cbf3f0','#2ec4b6','#fff']];let pi=0,particles=[];class P{constructor(x,y,c){this.x=x;this.y=y;this.size=Math.random()*10+1;this.sx=Math.random()*3-1.5;this.sy=Math.random()*3-1.5;this.color=c;this.opacity=1;}update(){this.x+=this.sx;this.y+=this.sy;if(this.size>0.2)this.size-=0.1;this.opacity-=0.01;}draw(){ctx.beginPath();ctx.fillStyle=this.color;ctx.globalAlpha=this.opacity;ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}}function spawn(x,y){for(let i=0;i<30;i++){const c=palettes[pi][Math.floor(Math.random()*palettes[pi].length)];particles.push(new P(x,y,c));}}function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);particles=particles.filter(p=>{p.update();p.draw();return p.opacity>0;});requestAnimationFrame(loop);}canvas.addEventListener('mousemove',e=>spawn(e.clientX,e.clientY));canvas.addEventListener('click',e=>spawn(e.clientX,e.clientY));document.getElementById('color-btn').addEventListener('click',()=>pi=(pi+1)%palettes.length);document.getElementById('reset-btn').addEventListener('click',()=>particles=[]);loop();<\/script></body></html>"
+            tabindex="-1"
+            scrolling="no"
+            style="pointer-events:auto;"
+          ></iframe>
+          <a href="https://abrahamramoskd.github.io/cursorpro/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
@@ -572,20 +641,17 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
           </div>
-          <h3 class="repo-card-title">Particle Trails</h3>
-          <p class="repo-card-desc">Canvas interactivo con partículas que siguen el cursor, dejan trails de color y soportan múltiples paletas.</p>
+          <h3 class="repo-card-title">CursorPro — Arte Generativo</h3>
+          <p class="repo-card-desc">Generador de arte interactivo con partículas que siguen el cursor. 13 paletas de colores intercambiables en tiempo real.</p>
           <div class="repo-tags"><span>Canvas API</span><span>JavaScript</span></div>
         </div>
       </article>
 
       <!-- CSS Animations -->
       <article class="repo-card reveal reveal-delay-2" data-cat="web">
-        <div class="repo-card-preview repo-preview-css">
-          <div class="repo-css-demo">
-            <div class="css-ball pulse-demo"></div>
-            <div class="css-ball bounce-demo"></div>
-            <div class="css-ball spin-demo"></div>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/css-animations-collection/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/css-animations-collection/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
@@ -602,14 +668,9 @@
 
       <!-- Panel Académico -->
       <article class="repo-card reveal reveal-delay-3" data-cat="systems">
-        <div class="repo-card-preview repo-preview-dashboard">
-          <div class="repo-dashboard-mini">
-            <div class="dash-bar" style="width:88%;background:#3b82f6"></div>
-            <div class="dash-bar" style="width:72%;background:#22c55e"></div>
-            <div class="dash-bar" style="width:81%;background:#eab308"></div>
-            <div class="dash-bar" style="width:65%;background:#3b82f6"></div>
-            <div class="dash-bar" style="width:90%;background:#22c55e"></div>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/plataformaempresarial/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/plataformaempresarial/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
@@ -618,7 +679,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
           </div>
-          <h3 class="repo-card-title">Panel de Trayectoria Académica</h3>
+          <h3 class="repo-card-title">Plataforma Empresarial Académica</h3>
           <p class="repo-card-desc">Dashboard con mapa de competencias, trayectoria laboral, formación activa y oportunidades con IA. Sidebar categorizado.</p>
           <div class="repo-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         </div>
@@ -626,13 +687,9 @@
 
       <!-- Acid Loop -->
       <article class="repo-card reveal reveal-delay-1" data-cat="web">
-        <div class="repo-card-preview repo-preview-acid">
-          <div class="repo-acid-rings">
-            <div class="acid-ring"></div>
-            <div class="acid-ring"></div>
-            <div class="acid-ring"></div>
-            <div class="acid-dot"></div>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/acid-loop/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/acid-loop/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
@@ -740,34 +797,28 @@
 
       <!-- RRHH Sistema -->
       <article class="repo-card reveal reveal-delay-3" data-cat="systems">
-        <div class="repo-card-preview repo-preview-rrhh">
-          <div class="rrhh-table-mini">
-            <div class="rrhh-row header"><span>Nombre</span><span>Puesto</span><span>Salario</span></div>
-            <div class="rrhh-row"><span>Ana García</span><span>Gerente</span><span>$45k</span></div>
-            <div class="rrhh-row"><span>Carlos López</span><span>Dev</span><span>$32k</span></div>
-            <div class="rrhh-row"><span>Sofía Ramírez</span><span>RRHH</span><span>$30k</span></div>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/ventapro/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/ventapro/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
-            <span class="repo-lang repo-lang-py">PY</span>
+            <span class="repo-lang repo-lang-js">JS</span>
             <a href="https://github.com/abrahamramoskd" target="_blank" rel="noopener" class="repo-link-icon" aria-label="Ver en GitHub">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
           </div>
-          <h3 class="repo-card-title">RRHH Sistema</h3>
-          <p class="repo-card-desc">Gestión de empleados con búsqueda, filtro por departamento, campos completos y dashboard de estadísticas.</p>
-          <div class="repo-tags"><span>Python</span><span>Tkinter</span><span>SQLite</span></div>
+          <h3 class="repo-card-title">VentaPRO — Punto de Venta</h3>
+          <p class="repo-card-desc">Sistema POS completo con dashboard, gestión de productos, historial de ventas, tickets e impresión. Dark/light mode.</p>
+          <div class="repo-tags"><span>JavaScript</span><span>localStorage</span></div>
         </div>
       </article>
 
       <!-- Maquinados -->
       <article class="repo-card reveal reveal-delay-1" data-cat="systems">
-        <div class="repo-card-preview repo-preview-maq">
-          <div class="maq-preview">
-            <div class="maq-price">$8,174<span>.70</span></div>
-            <div class="maq-label">Precio Final</div>
-          </div>
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/maquinados_industriales/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/maquinados_industriales/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
           <div class="repo-card-top">
@@ -777,8 +828,27 @@
             </a>
           </div>
           <h3 class="repo-card-title">Maquinados Industriales</h3>
-          <p class="repo-card-desc">Cotizador de costos industriales con márgenes por rango, costo financiero, horas hombre y maquinaria.</p>
+          <p class="repo-card-desc">Cotizador de costos industriales con márgenes por rango, costo financiero, horas hombre, maquinaria y paletas editables.</p>
           <div class="repo-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+      </article>
+
+      <!-- Tarjeta de Pago -->
+      <article class="repo-card reveal reveal-delay-2" data-cat="web">
+        <div class="repo-card-preview repo-preview-iframe">
+          <iframe src="https://abrahamramoskd.github.io/tarjeta_de_pago_interactiva/" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe>
+          <a href="https://abrahamramoskd.github.io/tarjeta_de_pago_interactiva/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
+        </div>
+        <div class="repo-card-body">
+          <div class="repo-card-top">
+            <span class="repo-lang repo-lang-js">JS</span>
+            <a href="https://github.com/abrahamramoskd" target="_blank" rel="noopener" class="repo-link-icon" aria-label="Ver en GitHub">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="repo-card-title">Tarjeta de Pago Interactiva</h3>
+          <p class="repo-card-desc">Componente de formulario de pago con tarjeta 3D interactiva que voltea en tiempo real al capturar datos VISA/Mastercard.</p>
+          <div class="repo-tags"><span>CSS 3D</span><span>JavaScript</span></div>
         </div>
       </article>
 

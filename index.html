@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP5HNVT4C9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HP5HNVT4C9');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HP5HNVT4C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HP5HNVT4C9');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO ═══════════════════════════════════════ -->
-  <title>ABRAHAM RAMOS| Desarrollo Web, Software y Simulación Virtual en Cadereyta Jiménez, NL</title>
+  <title>ABRAHAM RAMOS | Desarrollo Web, Software y Simulación Virtual en Cadereyta Jiménez, NL</title>
   <meta name="description" content="Agencia digital en Cadereyta Jiménez, Nuevo León. Desarrollo web, software a medida, videojuegos, simulación virtual y modelado 3D. ¡Transforma tu negocio hoy!" />
   <meta name="keywords" content="desarrollo web cadereyta, paginas web cadereyta, paginas web en cadereyta, pagina web cadereyta, pagina web, sitio web, sitio web cadereyta, negocios cadereyta, marketing digital nuevo leon, paginas web monterrey, web cadereyta, cade, cadereyta, ivality estudios, sistemas cadereyta, cadereyta jimenez, nl mexico, universidad cadereyta, humbrahexx, simulacion virtual, modelado 3d, videojuegos, SEO, posicionamiento web cadereyta, agencia digital cadereyta" />
   <meta name="geo.region" content="MX-NL" />
@@ -24,10 +23,6 @@
   <meta name="language" content="Spanish" />
   <meta name="revisit-after" content="7 days" />
   <meta name="rating" content="General" />
-  <meta name="category" content="Tecnología, Desarrollo Web, Software, Diseño Digital" />
-  <meta name="coverage" content="Cadereyta Jiménez, Nuevo León, México" />
-  <meta name="distribution" content="Global" />
-  <meta name="author" content="HUMBRAHEXX" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ivalityestudios.com/" />
 
@@ -81,9 +76,335 @@
   <!-- ═══ Fonts ════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
+
   <!-- ═══ Stylesheet ════════════════════════════════ -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ═══ NUEVOS ESTILOS AÑADIDOS ════════════════════════════════ -->
+  <style>
+    /* ═══════════════════════════════════════
+       TRUST BAR — banda de logos/tecnologías
+    ═══════════════════════════════════════ */
+    .trust-bar {
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      position: relative;
+    }
+    .trust-bar::before,
+    .trust-bar::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .trust-bar::before { left: 0; background: linear-gradient(to right, var(--bg, #0a0a0a), transparent); }
+    .trust-bar::after  { right: 0; background: linear-gradient(to left,  var(--bg, #0a0a0a), transparent); }
+
+    .trust-track {
+      display: flex;
+      gap: 2.5rem;
+      width: max-content;
+      animation: trust-scroll 28s linear infinite;
+    }
+    @keyframes trust-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s;
+    }
+    .trust-item:hover { color: rgba(255,255,255,0.7); }
+    .trust-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.6;
+    }
+
+    /* ═══════════════════════════════════════
+       PROCESO — cómo trabajamos
+    ═══════════════════════════════════════ */
+    #proceso {
+      padding: 6rem 0;
+    }
+    .proceso-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .proceso-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: 5%;
+      right: 5%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.12) 20%, rgba(255,255,255,0.12) 80%, transparent);
+      z-index: 0;
+    }
+    .paso-card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1.25rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+    }
+    .paso-card:hover {
+      border-color: rgba(0,200,150,0.4);
+      background: rgba(0,200,150,0.04);
+      transform: translateY(-6px);
+    }
+    .paso-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(0,200,150,0.12);
+      border: 1.5px solid rgba(0,200,150,0.35);
+      color: #00c896;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+    }
+    .paso-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: rgba(255,255,255,0.9);
+    }
+    .paso-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════
+       TESTIMONIOS
+    ═══════════════════════════════════════ */
+    #testimonios {
+      padding: 6rem 0;
+    }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testi-card:hover {
+      border-color: rgba(0,200,150,0.3);
+      transform: translateY(-4px);
+    }
+    .testi-quote-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+      color: rgba(0,200,150,0.4);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .testi-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 1.5rem;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00c896, #00e5a0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: #0a0a0a;
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+    }
+    .testi-role {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .testi-stars {
+      margin-left: auto;
+      color: #ffd166;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    /* ═══════════════════════════════════════
+       FAQ
+    ═══════════════════════════════════════ */
+    #faq {
+      padding: 6rem 0;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .faq-item.open {
+      border-color: rgba(0,200,150,0.3);
+    }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.02);
+      transition: background 0.2s, color 0.2s;
+      user-select: none;
+    }
+    .faq-q:hover { background: rgba(255,255,255,0.05); }
+    .faq-item.open .faq-q { color: #00c896; }
+    .faq-icon {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      font-weight: 300;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.75;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO STATS — mejora visual
+    ═══════════════════════════════════════ */
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00c896, #00e5a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.38);
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    /* ═══════════════════════════════════════
+       SOCIAL PROOF BADGE en hero
+    ═══════════════════════════════════════ */
+    .hero-social-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(0,200,150,0.08);
+      border: 1px solid rgba(0,200,150,0.2);
+      border-radius: 999px;
+      padding: 0.4rem 1rem 0.4rem 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .hero-social-proof .avatars {
+      display: flex;
+    }
+    .hero-social-proof .av {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00c896, #5f7fff);
+      border: 2px solid #0a0a0a;
+      margin-right: -8px;
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-social-proof strong {
+      color: #00c896;
+      font-weight: 700;
+    }
+    .hero-social-proof .av:last-child { margin-right: 8px; }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE FIXES
+    ═══════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .proceso-steps::before { display: none; }
+      .testimonios-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
@@ -109,13 +430,15 @@
 
   <ul class="nav-links" role="list">
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
     <li><a href="#beneficios">Beneficios</a></li>
     <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#showreel">Demos</a></li>
+    <li><a href="#testimonios">Clientes</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#repos">Repositorios</a></li>
     <li>
-      <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n" 
+      <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n"
          target="_blank" rel="noopener" class="nav-cta">Cotizar</a>
     </li>
   </ul>
@@ -143,15 +466,25 @@
     </h1>
 
     <p class="hero-subtitle">
-      Somos una agencia digital especializada en soluciones tecnológicas para empresas locales y nacionales. 
+      Somos una agencia digital especializada en soluciones tecnológicas para empresas locales y nacionales.
       Desde páginas web hasta videojuegos y simulación virtual.
     </p>
 
+    <!-- ★ NUEVO: Social proof badge -->
+    <div class="hero-social-proof">
+      <div class="avatars">
+        <div class="av">JR</div>
+        <div class="av">MP</div>
+        <div class="av">AL</div>
+      </div>
+      <span>Más de <strong>30 clientes</strong> confían en nosotros</span>
+    </div>
+
     <div class="hero-actions">
-      <a href="https://wa.me/528281050910?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n" 
+      <a href="https://wa.me/528281050910?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n"
          target="_blank" rel="noopener" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Solicitar Cotización
+        Solicitar Cotización Gratis
       </a>
       <a href="#portafolio" class="btn-secondary">
         Ver Portafolio
@@ -159,22 +492,65 @@
       </a>
     </div>
 
+    <!-- ★ MEJORADO: Stats con separador visual -->
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="hero-stat-value"><span data-count="50" data-suffix="+">50+</span></div>
-        <div class="hero-stat-label">Proyectos</div>
+        <div class="hero-stat-label">Proyectos entregados</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-value"><span data-count="30" data-suffix="+">30+</span></div>
-        <div class="hero-stat-label">Clientes</div>
+        <div class="hero-stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value"><span data-count="3" data-suffix="+">3+</span></div>
+        <div class="hero-stat-label">Años de experiencia</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-value"><span data-count="6" data-suffix="">6</span></div>
-        <div class="hero-stat-label">Servicios</div>
+        <div class="hero-stat-label">Servicios especializados</div>
       </div>
     </div>
   </div>
 </header>
+
+<!-- ═══════════════════════════════════════════════
+     ★ NUEVO: TRUST BAR — tecnologías / stack
+════════════════════════════════════════════════ -->
+<div class="trust-bar" aria-hidden="true">
+  <div class="trust-track">
+    <!-- primera copia -->
+    <span class="trust-item"><span class="trust-dot"></span>ASP.NET</span>
+    <span class="trust-item"><span class="trust-dot"></span>Python</span>
+    <span class="trust-item"><span class="trust-dot"></span>JavaScript</span>
+    <span class="trust-item"><span class="trust-dot"></span>Unity 3D</span>
+    <span class="trust-item"><span class="trust-dot"></span>Blender</span>
+    <span class="trust-item"><span class="trust-dot"></span>AWS</span>
+    <span class="trust-item"><span class="trust-dot"></span>React</span>
+    <span class="trust-item"><span class="trust-dot"></span>Node.js</span>
+    <span class="trust-item"><span class="trust-dot"></span>SQL Server</span>
+    <span class="trust-item"><span class="trust-dot"></span>WebGL</span>
+    <span class="trust-item"><span class="trust-dot"></span>Canvas API</span>
+    <span class="trust-item"><span class="trust-dot"></span>Pygame</span>
+    <span class="trust-item"><span class="trust-dot"></span>SEO Local</span>
+    <span class="trust-item"><span class="trust-dot"></span>VR / XR</span>
+    <!-- segunda copia para loop infinito -->
+    <span class="trust-item"><span class="trust-dot"></span>ASP.NET</span>
+    <span class="trust-item"><span class="trust-dot"></span>Python</span>
+    <span class="trust-item"><span class="trust-dot"></span>JavaScript</span>
+    <span class="trust-item"><span class="trust-dot"></span>Unity 3D</span>
+    <span class="trust-item"><span class="trust-dot"></span>Blender</span>
+    <span class="trust-item"><span class="trust-dot"></span>AWS</span>
+    <span class="trust-item"><span class="trust-dot"></span>React</span>
+    <span class="trust-item"><span class="trust-dot"></span>Node.js</span>
+    <span class="trust-item"><span class="trust-dot"></span>SQL Server</span>
+    <span class="trust-item"><span class="trust-dot"></span>WebGL</span>
+    <span class="trust-item"><span class="trust-dot"></span>Canvas API</span>
+    <span class="trust-item"><span class="trust-dot"></span>Pygame</span>
+    <span class="trust-item"><span class="trust-dot"></span>SEO Local</span>
+    <span class="trust-item"><span class="trust-dot"></span>VR / XR</span>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════════
      SERVICIOS
@@ -189,7 +565,6 @@
 
     <div class="services-grid">
 
-      <!-- Desarrollo Web -->
       <article class="service-card reveal reveal-delay-1">
         <div class="service-icon-wrap">🌐</div>
         <h3 class="service-name">Desarrollo Web</h3>
@@ -197,7 +572,6 @@
         <div class="service-arrow">→</div>
       </article>
 
-      <!-- Software -->
       <article class="service-card reveal reveal-delay-2">
         <div class="service-icon-wrap">⚙️</div>
         <h3 class="service-name">Desarrollo de Software</h3>
@@ -205,7 +579,6 @@
         <div class="service-arrow">→</div>
       </article>
 
-      <!-- Simulación Virtual -->
       <article class="service-card reveal reveal-delay-3">
         <div class="service-icon-wrap">🥽</div>
         <h3 class="service-name">Simulación Virtual</h3>
@@ -213,7 +586,6 @@
         <div class="service-arrow">→</div>
       </article>
 
-      <!-- Videojuegos -->
       <article class="service-card reveal reveal-delay-1">
         <div class="service-icon-wrap">🎮</div>
         <h3 class="service-name">Desarrollo de Videojuegos</h3>
@@ -221,7 +593,6 @@
         <div class="service-arrow">→</div>
       </article>
 
-      <!-- Modelado 3D -->
       <article class="service-card reveal reveal-delay-2">
         <div class="service-icon-wrap">🧊</div>
         <h3 class="service-name">Modelado y Escaneo 3D</h3>
@@ -229,7 +600,6 @@
         <div class="service-arrow">→</div>
       </article>
 
-      <!-- Automatización -->
       <article class="service-card reveal reveal-delay-3">
         <div class="service-icon-wrap">🤖</div>
         <h3 class="service-name">Automatización Empresarial</h3>
@@ -248,7 +618,6 @@
   <div class="container">
     <div class="benefits-layout">
 
-      <!-- Visual Stats -->
       <div class="benefits-visual reveal">
         <div class="benefits-card-main">
           <div class="benefit-number" data-count="98" data-suffix="%">98%</div>
@@ -268,13 +637,12 @@
             </div>
             <div class="mini-card">
               <div class="mini-card-value" data-count="15" data-suffix="">15</div>
-              <div class="mini-card-label">Días promedio</div>
+              <div class="mini-card-label">Días promedio entrega</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Benefits List -->
       <div class="benefits-list">
         <header class="section-header" style="text-align:left; margin-bottom:2rem;">
           <p class="section-tag">Por qué elegirnos</p>
@@ -312,6 +680,47 @@
             <p class="benefit-text-desc">Soluciones modernas: VR, 3D, IA aplicada y software empresarial al alcance de negocios locales.</p>
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ★ NUEVO: PROCESO — cómo trabajamos
+════════════════════════════════════════════════ -->
+<section id="proceso" aria-labelledby="proceso-title">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-tag">Cómo trabajamos</p>
+      <h2 class="section-title" id="proceso-title">De la idea al <em>producto</em><br>en 4 pasos</h2>
+      <p class="section-subtitle">Un proceso claro, sin sorpresas, con entregas reales en cada etapa.</p>
+    </header>
+
+    <div class="proceso-steps">
+
+      <div class="paso-card reveal reveal-delay-1">
+        <div class="paso-num">01</div>
+        <p class="paso-title">Diagnóstico gratuito</p>
+        <p class="paso-desc">Analizamos tu negocio, tus metas y qué tecnología realmente necesitas. Sin rodeos, sin ventas innecesarias.</p>
+      </div>
+
+      <div class="paso-card reveal reveal-delay-2">
+        <div class="paso-num">02</div>
+        <p class="paso-title">Propuesta y cotización</p>
+        <p class="paso-desc">Te presentamos un plan detallado con tiempos, costos y alcance. Cotización sin compromiso en menos de 24 h.</p>
+      </div>
+
+      <div class="paso-card reveal reveal-delay-3">
+        <div class="paso-num">03</div>
+        <p class="paso-title">Desarrollo iterativo</p>
+        <p class="paso-desc">Construimos con entregas parciales para que veas el avance. Tu feedback forma parte del proceso en todo momento.</p>
+      </div>
+
+      <div class="paso-card reveal reveal-delay-4">
+        <div class="paso-num">04</div>
+        <p class="paso-title">Lanzamiento y soporte</p>
+        <p class="paso-desc">Publicamos tu proyecto, te capacitamos y te acompañamos después del lanzamiento. No desaparecemos al entregar.</p>
       </div>
 
     </div>
@@ -404,7 +813,6 @@
       <span class="showreel-count">10 demos disponibles</span>
     </div>
 
-    <!-- Featured Video -->
     <div class="showreel-featured reveal" id="featured-video-wrap">
       <video id="featured-video" muted playsinline loop preload="metadata"
              src="assets/videos/recorridovirtual.mp4"
@@ -417,7 +825,6 @@
       <div class="video-play-btn" aria-hidden="true">▶</div>
     </div>
 
-    <!-- Demo Grid -->
     <div class="showreel-grid" id="showreel-grid">
 
       <div class="demo-card active reveal reveal-delay-1"
@@ -485,7 +892,6 @@
         <div class="demo-play-icon">▶</div>
       </div>
 
-      <!-- ── 5 VIDEOS NUEVOS ── -->
       <div class="demo-card reveal reveal-delay-1"
            data-src="assets/videos/animacion_en_galeria.mp4"
            data-title="Animación en Galería"
@@ -556,6 +962,62 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     ★ NUEVO: TESTIMONIOS
+════════════════════════════════════════════════ -->
+<section id="testimonios" aria-labelledby="testimonios-title">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-tag">Lo que dicen nuestros clientes</p>
+      <h2 class="section-title" id="testimonios-title">Resultados que <em>se sienten</em><br>en el negocio</h2>
+      <p class="section-subtitle">Empresas de Cadereyta, Monterrey y zona metropolitana que ya crecen con nosotros.</p>
+    </header>
+
+    <div class="testimonios-grid">
+
+      <div class="testi-card reveal reveal-delay-1">
+        <span class="testi-quote-icon">"</span>
+        <p class="testi-text">El sistema de almacén que desarrollaron para FLEX-TEC cambió completamente nuestra operación. Ahora tenemos control total del inventario en tiempo real. Fue una inversión que se pagó sola en menos de 3 meses.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JR</div>
+          <div>
+            <p class="testi-name">Jefe de Operaciones</p>
+            <p class="testi-role">FLEX-TEC México · Software Empresarial</p>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-2">
+        <span class="testi-quote-icon">"</span>
+        <p class="testi-text">Necesitábamos un sitio web que transmitiera confianza industrial. Abraham entendió exactamente lo que queríamos y entregó algo que supera lo que esperábamos. Los clientes ahora nos encuentran en Google sin problema.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AL</div>
+          <div>
+            <p class="testi-name">Director Comercial</p>
+            <p class="testi-role">APC Lubricantes · Desarrollo Web</p>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-3">
+        <span class="testi-quote-icon">"</span>
+        <p class="testi-text">El sistema de punto de venta VentaPRO es exactamente lo que un negocio local necesita. Fácil de usar, con reportes claros y soporte inmediato. Lo recomendaría sin pensarlo dos veces.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MP</div>
+          <div>
+            <p class="testi-name">Propietaria</p>
+            <p class="testi-role">Comercio Local, Cadereyta · Software POS</p>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      NOSOTROS
 ════════════════════════════════════════════════ -->
 <section id="nosotros" aria-labelledby="nosotros-title">
@@ -592,11 +1054,9 @@
         <div class="about-map reveal reveal-delay-4">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57546.16!2d-99.9972!3d25.5927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866250e3c53b04bd%3A0xa3219d56b7af3b6!2sCadereyta%20Jim%C3%A9nez%2C%20Nuevo%20Le%C3%B3n!5e0!3m2!1ses!2smx!4v1"
-            width="100%"
-            height="220"
+            width="100%" height="220"
             style="border:0; border-radius:16px; opacity:0.85; filter: saturate(0.7) hue-rotate(185deg) brightness(0.8);"
-            allowfullscreen=""
-            loading="lazy"
+            allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Ubicación Cadereyta Jiménez, NL"
             aria-label="Mapa de Cadereyta Jiménez, Nuevo León"
@@ -629,7 +1089,6 @@
       <p class="section-subtitle">Desde videojuegos y visualizaciones hasta sistemas y herramientas de productividad.</p>
     </header>
 
-    <!-- Filtros -->
     <div class="repos-filters reveal">
       <button class="repo-filter active" data-filter="all">Todos</button>
       <button class="repo-filter" data-filter="web">Web / Canvas</button>
@@ -639,15 +1098,11 @@
 
     <div class="repos-grid">
 
-      <!-- CursorPro — Arte Generativo -->
       <article class="repo-card reveal reveal-delay-1" data-cat="web">
         <div class="repo-card-preview repo-preview-iframe repo-preview-srcdoc">
           <iframe
             srcdoc="<!DOCTYPE html><html><head><meta charset='UTF-8'><style>body,html{margin:0;padding:0;overflow:hidden;background:#000}canvas{width:100%;height:100vh}#controls{position:absolute;top:6px;left:6px;background:rgba(255,255,255,0.15);padding:6px 8px;border-radius:6px;backdrop-filter:blur(8px)}button{margin:2px;padding:3px 7px;background:#4CAF50;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:10px}</style></head><body><canvas id='art-canvas'></canvas><div id='controls'><button id='color-btn'>Paleta</button><button id='reset-btn'>Reset</button></div><script>const canvas=document.getElementById('art-canvas'),ctx=canvas.getContext('2d');canvas.width=window.innerWidth;canvas.height=window.innerHeight;const palettes=[['#FF6B6B','#4ECDC4','#45B7D1','#FDCB6E','#6C5CE7'],['#FF00FF','#00FFFF','#FFFF00','#FF0000','#0000FF'],['#f72585','#7209b7','#3a0ca3','#4361ee','#4cc9f0'],['#ffbe0b','#fb5607','#ff006e','#8338ec','#3a86ff'],['#ffcdb2','#ffb4a2','#e5989b','#b5838d','#6d6875'],['#ff9f1c','#ffbf69','#cbf3f0','#2ec4b6','#fff']];let pi=0,particles=[];class P{constructor(x,y,c){this.x=x;this.y=y;this.size=Math.random()*10+1;this.sx=Math.random()*3-1.5;this.sy=Math.random()*3-1.5;this.color=c;this.opacity=1;}update(){this.x+=this.sx;this.y+=this.sy;if(this.size>0.2)this.size-=0.1;this.opacity-=0.01;}draw(){ctx.beginPath();ctx.fillStyle=this.color;ctx.globalAlpha=this.opacity;ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}}function spawn(x,y){for(let i=0;i<30;i++){const c=palettes[pi][Math.floor(Math.random()*palettes[pi].length)];particles.push(new P(x,y,c));}}function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);particles=particles.filter(p=>{p.update();p.draw();return p.opacity>0;});requestAnimationFrame(loop);}canvas.addEventListener('mousemove',e=>spawn(e.clientX,e.clientY));canvas.addEventListener('click',e=>spawn(e.clientX,e.clientY));document.getElementById('color-btn').addEventListener('click',()=>pi=(pi+1)%palettes.length);document.getElementById('reset-btn').addEventListener('click',()=>particles=[]);loop();<\/script></body></html>"
-            tabindex="-1"
-            scrolling="no"
-            style="pointer-events:auto;"
-          ></iframe>
+            tabindex="-1" scrolling="no" style="pointer-events:auto;"></iframe>
           <a href="https://abrahamramoskd.github.io/cursorpro/" target="_blank" rel="noopener" class="iframe-visit-btn" aria-label="Abrir proyecto">↗</a>
         </div>
         <div class="repo-card-body">
@@ -663,7 +1118,6 @@
         </div>
       </article>
 
-      <!-- CSS Animations -->
       <article class="repo-card reveal reveal-delay-2" data-cat="web">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/css-animations.png" alt="CSS Animations Collection" loading="lazy" />
@@ -682,7 +1136,6 @@
         </div>
       </article>
 
-      <!-- Panel Académico -->
       <article class="repo-card reveal reveal-delay-3" data-cat="systems">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/plataforma-empresarial.png" alt="Plataforma Empresarial" loading="lazy" />
@@ -701,7 +1154,6 @@
         </div>
       </article>
 
-      <!-- Acid Loop -->
       <article class="repo-card reveal reveal-delay-1" data-cat="web">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/acid-loop.png" alt="Acid Loop" loading="lazy" />
@@ -720,7 +1172,6 @@
         </div>
       </article>
 
-      <!-- Space Invaders -->
       <article class="repo-card reveal reveal-delay-2" data-cat="games">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/space-onvaders.png" alt="Space Invaders" loading="lazy" />
@@ -738,7 +1189,6 @@
         </div>
       </article>
 
-      <!-- Pac-Man -->
       <article class="repo-card reveal reveal-delay-3" data-cat="games">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/pac-man.png" alt="Pac-Man" loading="lazy" />
@@ -756,7 +1206,6 @@
         </div>
       </article>
 
-      <!-- Snake Neon -->
       <article class="repo-card reveal reveal-delay-1" data-cat="games">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/snake.png" alt="Snake Neon Edition" loading="lazy" />
@@ -774,7 +1223,6 @@
         </div>
       </article>
 
-      <!-- Tetris -->
       <article class="repo-card reveal reveal-delay-2" data-cat="games">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/tetris.png" alt="Tetris" loading="lazy" />
@@ -792,7 +1240,6 @@
         </div>
       </article>
 
-      <!-- RRHH Sistema -->
       <article class="repo-card reveal reveal-delay-3" data-cat="systems">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/ventapro.png" alt="VentaPRO" loading="lazy" />
@@ -811,7 +1258,6 @@
         </div>
       </article>
 
-      <!-- Maquinados -->
       <article class="repo-card reveal reveal-delay-1" data-cat="systems">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/maquinados.png" alt="Maquinados Industriales" loading="lazy" />
@@ -830,7 +1276,6 @@
         </div>
       </article>
 
-      <!-- Tarjeta de Pago -->
       <article class="repo-card reveal reveal-delay-2" data-cat="web">
         <div class="repo-card-preview repo-preview-img">
           <img src="assets/images/tarjeta.png" alt="Tarjeta de Pago" loading="lazy" />
@@ -862,6 +1307,72 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     ★ NUEVO: FAQ
+════════════════════════════════════════════════ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-tag">Preguntas frecuentes</p>
+      <h2 class="section-title" id="faq-title">Todo lo que necesitas<br><em>saber antes</em> de empezar</h2>
+    </header>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item reveal reveal-delay-1" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Cuánto cuesta hacer una página web?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Depende del tipo de proyecto. Una landing page básica puede partir desde $3,000 MXN, mientras que una tienda en línea o un sistema empresarial puede ir desde $15,000 MXN. Te enviamos una cotización gratis y sin compromiso en menos de 24 horas. Escríbenos por WhatsApp y con gusto hacemos el diagnóstico.
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Cuánto tiempo tarda un proyecto?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Un sitio web o landing page estándar tiene un tiempo promedio de entrega de 7 a 15 días. Los sistemas empresariales o proyectos complejos (software, videojuegos, VR) pueden tomar entre 4 y 12 semanas según el alcance. Siempre acordamos tiempos reales antes de empezar, sin promesas vacías.
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Trabajan solo en Cadereyta o también en Monterrey y otras ciudades?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Tenemos base en Cadereyta Jiménez pero trabajamos con clientes de toda la zona metropolitana de Monterrey y también con empresas de todo México de forma remota. La distancia no es obstáculo; coordinamos todo por videollamada, WhatsApp y entregas digitales.
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Ofrecen soporte después de entregar el proyecto?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Sí. No desaparecemos al entregar. Incluimos un periodo de soporte post-entrega en todos nuestros proyectos, y podemos extenderlo con planes de mantenimiento mensuales. Tu negocio no se puede quedar sin soporte, y lo tomamos en serio.
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2" role="listitem">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+          ¿Puedo pedir cambios durante el desarrollo?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Absolutamente. Trabajamos de forma iterativa con entregas parciales para que puedas ver el avance y hacer ajustes en el camino. Queremos que el resultado final sea exactamente lo que necesitas, no simplemente lo que describiste al principio.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      CTA FINAL
 ════════════════════════════════════════════════ -->
 <section id="cta" aria-labelledby="cta-title">
@@ -873,12 +1384,12 @@
       </h2>
       <p class="cta-subtitle">Contáctanos por WhatsApp y recibe una cotización gratuita en menos de 24 horas.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20negocio" 
+        <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20negocio"
            target="_blank" rel="noopener" class="btn-whatsapp">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Escribir por WhatsApp
         </a>
-        <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" 
+        <a href="https://wa.me/528281050910?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n"
            target="_blank" rel="noopener" class="btn-secondary">
           Línea alterna
         </a>
@@ -904,10 +1415,7 @@
           <a href="https://wa.me/528281050910" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
-          <a href="https://www.facebook.com/humbrahexx/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook Personal (Humbrahexx)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/ivalitystudios" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook Ivality Studios">
+          <a href="https://www.facebook.com/humbrahexx/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
           <a href="https://github.com/abrahamramoskd" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
@@ -916,7 +1424,7 @@
           <a href="https://www.linkedin.com/in/abraham-ramos-6b3740403/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a href="mailto:humbrahexxfff@gmail.com" class="social-btn" aria-label="Correo electrónico">
+          <a href="mailto:humbrahexxfff@gmail.com" class="social-btn" aria-label="Email">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
           </a>
         </div>
@@ -965,7 +1473,27 @@
 
 <!-- ═══ Scripts ═══════════════════════════════════ -->
 <script src="js/main.js" defer></script>
- 
+
+<!-- ★ NUEVO: FAQ interactivo -->
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      // cierra todos
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      // abre el clickeado si estaba cerrado
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+</script>
 
 </body>
 </html>
